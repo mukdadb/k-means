@@ -36,7 +36,3 @@ def kmeans(points, k):
     return np.array([[points[j]
                       for j, point in enumerate(points) if assigment[j] == i]
                                                     for i in range(len(c))])
-
-
-
-print(kmeans([[1,1],[0,0],[5,5],[10,10], [9,9]], 2))
