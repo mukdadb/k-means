@@ -13,7 +13,7 @@ def kmeans(points, k):
             d[j] = min([euclidean(point, centroid) for centroid in c[:i]])
         p = [distance ** 2 for distance in d]
         psum = sum(p)
-        p /= psum
+        p = [x / psum for x in p]
         c[i] = points[np.random.choice(len(points), p=p)]
     # Main part
     while True:
