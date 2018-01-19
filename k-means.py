@@ -32,7 +32,6 @@ def kmeans(points, k):
         if np.array_equal(np.array(c), np.array(new_c)):
             break
         c = new_c
-    print(c)
     return np.array([[points[j]
                       for j, point in enumerate(points) if assigment[j] == i]
                                                     for i in range(len(c))])
